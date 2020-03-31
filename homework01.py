@@ -1,6 +1,5 @@
 
 def calculate(a, b, c):
-    print("\nTrybiki funkcji dają ci wartość:")
     if c:
         print(a+b)
     else:
@@ -28,7 +27,9 @@ while repeat:
     p = make_float(input("\nDej mnie twoją pierszą liczbę:\n"))
     q = make_float(input("\nDej mnie twoją drugą liczbę:\n"))
     r = make_bool(str(input("\nCzy tszeci argument jest True? y/n\n")))
+    print("\nTrybiki funkcji dają ci wartość:")
     calculate(p, q, r)
     repeat = make_bool(input("\nPowtarzamy? y/n\n"))
 
 print("\nOK NARA LESZCZU\n")
+
