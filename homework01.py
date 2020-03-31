@@ -1,12 +1,10 @@
 
 def calculate(a, b, c):
     print("\nTrybiki funkcji dają ci wartość:")
-    if c == True:
+    if c:
         print(a+b)
-    elif c == False:
-        print(a-b)
     else:
-        print("\nCoś się wyjebało???????\n")
+        print(a-b)
 
 def make_bool(a):
     if a == "y":
@@ -14,28 +12,23 @@ def make_bool(a):
     elif a == "n":
         return False
     else:
-        a = str(input("\nMiało być y/n ty mały kurwiu, wpisz mi to jeszcze raz\n"))
-        return make_bool(a)
+        prompt = "\nMiało być y/n ty mały kurwiu, wpisz mi to jeszcze raz\n"
+        return make_bool(input(prompt))
 
 def make_float(a):
     try:
         return float(a)
     except ValueError:
-        a = input("\nMiała być liczba...\n")
-        return make_float(a)
+        prompt = "\nMiała być liczba...\n"
+        return make_float(input(prompt))
 
 repeat = True
 
 while repeat:
-    p = input("\nDej mnie twoją pierszą liczbę:\n")
-    p = make_float(p)
-    q = input("\nDej mnie twoją drugą liczbę:\n")
-    q = make_float(q)
-    r = str(input("\nCzy tszeci argument jest True? y/n\n"))
-    r = make_bool(r)
+    p = make_float(input("\nDej mnie twoją pierszą liczbę:\n"))
+    q = make_float(input("\nDej mnie twoją drugą liczbę:\n"))
+    r = make_bool(str(input("\nCzy tszeci argument jest True? y/n\n")))
     calculate(p, q, r)
-    repeat = input("\nPowtarzamy? y/n\n")
-    repeat = make_bool(repeat)
+    repeat = make_bool(input("\nPowtarzamy? y/n\n"))
 
 print("\nOK NARA LESZCZU\n")
-
