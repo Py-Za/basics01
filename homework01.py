@@ -21,8 +21,8 @@ def make_float(a):
     try:
         return float(a)
     except ValueError:
-        b = input("\nMiała być liczba...\n")
-        return make_float(b)
+        a = input("\nMiała być liczba...\n")
+        return make_float(a)
 
 repeat = True
 
